@@ -1,50 +1,31 @@
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
-## Get started
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## โครงสร้างโปรเจค
+ 
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+todo-react-native/
+├── app/                    → หน้าจอทั้งหมดของ app
+│   ├── (auth)/             → กลุ่มหน้าจอสำหรับ Authentication (Login, Register)
+│   ├── (tabs)/             → กลุ่มหน้าจอ Tab Navigation
+│   ├── (content)/          → กลุ่มหน้าจอเนื้อหาการทำงาน อาจไม่ใช้แค่ชื่อ content อาจเป็นชื่ออื่น เช่น (notification), (profile), (setting)
+│   ├── _layout.tsx         → กำหนด Layout และ Navigation หลักของแอป
+│   └── modal.tsx           → หน้า Modal (popup) กลางแอป
+│
+├── assets/                 → รูปภาพ, ฟอนต์, ไอคอน
+│
+├── components/             → Component ย่อยที่ใช้ซ้ำได้หลายหน้า เช่น Button, Badge, Checkbox, TodoItem
+│
+├── constants/              → ค่าคงที่ที่ใช้ทั้งแอป เช่น สี (Colors), ขนาด (Spacing), ชื่อหมวดหมู่
+│
+├── context/
+│   └── AuthContext.js      → จัดการ State ของ User ที่ Login อยู่ทุก Component สามารถดึงข้อมูล User ได้จากที่นี่
+│
+├── hooks/                  → Custom Hooks แยก Logic ออกจาก UI เช่น useTodos (จัดการ todo + AsyncStorage)
+│
+├── utils/
+│   └── config.ts           → ค่า config กลาง เช่น API URL, Storage Key
+│
+├── .gitignore              → บอก Git ว่าไม่ต้อง push ไฟล์ไหน (เช่น node_modules)
+├── app.json                → ตั้งค่าแอป เช่น ชื่อแอป, ไอคอน, splash screen
+├── package.json            → รายการ dependencies และ scripts ของโปรเจค
+├── tsconfig.json           → ตั้งค่า TypeScript
+└── README.md               → คำอธิบายรายละเอียด
