@@ -6,7 +6,7 @@ todo-react-native/
 ├── app/                    หน้าจอทั้งหมดของ app
 │   ├── (auth)/             กลุ่มหน้าจอสำหรับ Authentication (Login, Register)
 │   ├── (tabs)/             กลุ่มหน้าจอ Tab Navigation
-│   ├── (content)/          กลุ่มหน้าจอเนื้อหาการทำงาน อาจไม่ใช้แค่ชื่อ content อาจเป็นชื่ออื่น เช่น (notification), (profile), (setting)
+│   ├── (content)/          กลุ่มหน้าจอการทำงานหลัก เช่น (notification), (profile), (setting)
 │   ├── _layout.tsx         กำหนด Layout และ Navigation หลักของแอป
 │
 ├── assets/                 รูปภาพ, ฟอนต์, ไอคอน
